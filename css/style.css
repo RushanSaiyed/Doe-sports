@@ -1,0 +1,1181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+:root {
+    --blackcolor: #0D0D0D;
+    --redcolor: #f2462e;
+    --buttonred: #ff3333;
+    --whitecolor: #fff;
+    --purplecolor: #7e709c;
+    --fonts: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+html,
+body {
+    min-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Top Nav */
+.main-top{
+    background-color: var(--blackcolor);
+}
+.top-nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.top-nav .text{
+    color: var(--whitecolor);
+}
+.text h2{
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.top-nav .icon i{
+    color: var(--whitecolor);
+    margin-right: 10px;
+    
+}
+/* end Nav */
+
+/* Start Navbar */
+    
+nav {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: var(--whitecolor);
+    align-items: center;
+    justify-content: space-between;
+    
+    flex-wrap: wrap;
+}
+
+nav .logo img {
+    height: 60px;
+}
+
+nav form .inp {
+    display: flex;
+    height: 30px;
+    justify-content: center;
+}
+
+nav form .inp input::placeholder {
+    padding: 0 10px;
+}
+
+nav form .inp .search {
+    background-color: var(--blackcolor);
+    padding: 4px 10px;
+    height: 30px;
+}
+
+nav form .inp .search i {
+    color: var(--whitecolor);
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: var(--blackcolor);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav .menu-btn i {
+    color: var(--blackcolor);
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+nav .cart-main {
+    display: flex;
+    height: 30px;
+}
+
+nav .cart-main .cart {
+    background-color: var(--purplecolor);
+    padding: 4px 0px;
+}
+
+nav .cart-main .cart a,
+nav .cart-main .user a
+{
+    padding: 8px !important;
+}
+
+
+nav .cart-main .user {
+    background-color: lightgray;
+    margin-right: 10px;
+    padding: 2px 0px;
+}
+
+nav .cart-main .user i {
+    color: var(--blackcolor);
+}
+
+nav .cart-main .value-cart {
+    border: 1px solid lightgray;
+    padding: 5px 12px;
+    margin-right: 10px;
+    border-left: none;
+}
+nav form{
+    margin-left: 130px;
+}
+nav .cart-main .cart i {
+    color: var(--whitecolor);
+    font-size: 15px;
+}
+
+@media (max-width: 1024px) {
+    nav .cart-main {
+        display: flex;
+        height: 40px;
+        justify-content: center;
+    }
+    nav .cart-main .cart {
+        padding: 0 !important;
+    }
+    nav .cart-main .user {
+        padding: 0 !important;
+    }
+    nav {
+        padding: 5px 25px 0 20px;
+    }
+    nav .menu-btn i {
+        display: block;
+    }
+    #click:checked~.menu-btn i:before {
+        content: "\f00d";
+    }
+    nav ul {
+        position: absolute;
+        top: 114px;
+        left: -100%;
+        background: var(--whitecolor);
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+    #click:checked~ul {
+        left: 0;
+    }
+    nav ul li {
+        width: 100%;
+        margin: 40px 0;
+    }
+    nav ul li a {
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked~ul li a {
+        margin-left: 0px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+        background: none;
+        color: var(--redcolor);
+    }
+    nav form{
+        margin-left: 0px;
+    }
+}
+/* End Navbar */
+
+/* Start Header */
+header .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    min-height: 10vh;
+    padding: 5px 0;
+    /* min-width: 100%; */
+    z-index: 10;
+    background: var(--whitecolor);
+    /* border-bottom: 2px solid #0c2d48; */
+}
+
+header .navigation .logo {
+    margin-left: 20px;
+}
+
+header .navigation .logo h1 {
+    color: #b1d4e0;
+    font-size: 30px;
+    line-height: 38px;
+}
+
+header .navigation .menu-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 0%;
+
+    /* margin: auto 20px auto ; */
+}
+
+header .navigation .humbarger {
+    margin-right: 20px;
+    display: none;
+}
+
+header .navigation .humbarger .bar {
+    width: 30px;
+    height: 2px;
+    margin: 7px;
+    background: #b1d4e0;
+}
+
+header .navigation .menu-list li a {
+    color: var(--blackcolor);
+    font-size: 12px;
+    /* letter-spacing: 2px; */
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 1s ease, border 1s ease;
+    text-decoration: none;
+    margin-right: 30px;
+}
+/* Start Header */
+
+
+/* Start Banner */
+.banner-section {
+    
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+}
+
+.banner-section .main-banner {
+    display: flex;
+
+}
+
+.banner-text,
+.banner-image {
+    width: 50%;
+}
+
+.main-banner .banner-image img {
+    height: 80vh;
+}
+
+.main-banner .banner-text {
+    padding: 70px 0;
+}
+
+.main-banner .banner-text h5 {
+    color: var(--redcolor);
+    font-weight: 300;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.main-banner .banner-text h5 span {
+    font-weight: 600;
+    color: var(--redcolor);
+    font-size: 18px;
+}
+
+.banner-text h1 {
+    font-size: 50px;
+    color: var(--whitecolor);
+    text-transform: uppercase;
+}
+
+.banner-text h2 {
+    font-weight: 800;
+    font-size: 150px;
+    color: var(--whitecolor);
+    margin-top: -35px;
+}
+
+.banner-text .view-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: var(--whitecolor);
+    font-weight: 300;
+    background-color: var(--buttonred);
+}
+
+.main-banner .off {
+    display: flex;
+
+}
+
+.off h3 {
+    font-weight: 800;
+    font-size: 55px;
+    color: var(--whitecolor);
+    /* padding-top: 35px; */
+    color: var(--redcolor);
+}
+
+.off h4 {
+    font-weight: 800;
+    font-size: 60px;
+    color: var(--whitecolor);
+    margin-top: -26px;
+    color: var(--redcolor);
+}
+
+/* End Banner */
+
+
+/* Start Jacket Banner */
+.unisex-section {
+    padding: 50px 0;
+}
+
+.unisex-section .unisex-jacket {
+    justify-content: space-between;
+    display: flex;
+}
+
+.unisex-section .unisex-jacket .uni-one {
+    width: 40%;
+}
+
+.unisex-section .unisex-jacket .running-jacket {
+    width: 56%;
+}
+
+.unisex-jacket .uni-one img {
+    background-color: rgba(0, 0, 0, 1);
+    filter: brightness(25%);
+    width: 100%;
+    height: 320px;
+}
+
+.unisex-jacket .uni-one,
+.unisex-jacket .running-jacket {
+    position: relative;
+}
+
+.unisex-jacket .uni-one .jacket-text {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    color: var(--whitecolor);
+}
+
+.uni-one .jacket-text h2 {
+    text-transform: uppercase;
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+
+.uni-one .jacket-text h4 {
+    text-transform: uppercase;
+    color: var(--purplecolor);
+    font-weight: 400;
+    font-size: 23px;
+}
+
+.unisex-jacket .uni-one .jacket-btn {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+
+}
+
+.uni-one .jacket-btn .shop-btn {
+    text-decoration: none;
+    color: var(--whitecolor);
+    background-color: var(--purplecolor);
+    padding: 5px 20px;
+}
+
+
+.unisex-jacket .running-jacket img {
+    width: 100%;
+    height: 320px;
+}
+
+.unisex-jacket .running-jacket .running-text {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    /* text-align: center; */
+    color: var(--whitecolor);
+}
+
+.running-jacket .running-text h2 {
+    text-transform: uppercase;
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+
+.running-jacket .running-text h4 {
+    text-transform: uppercase;
+    color: var(--purplecolor);
+    font-weight: 400;
+    font-size: 23px;
+}
+
+.unisex-jacket .running-jacket .running-btn {
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
+    right: 0;
+
+
+}
+
+.running-jacket .running-btn .shop-btn {
+    text-decoration: none;
+    color: var(--whitecolor);
+    background-color: var(--purplecolor);
+    padding: 5px 20px;
+}
+
+/* End Jacket Banner */
+
+
+
+/* Arrival Section */
+.arrival-section {
+    padding: 50px 0;
+}
+
+.arrival-section .arrival-text h2 {
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.arrival-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrival-text .icos i {
+    margin-right: 20px;
+}
+
+.arrival-section .product-cards {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    width: 100%;
+}
+
+/* .product-cards .card{
+    width: 25%;
+} */
+
+.product-cards .card img {
+    height: 250px;
+    margin: auto;
+}
+
+.product-cards .card .card-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-cards .card .card-text h2 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.product-cards .card .card-text p {
+    font-weight: 700;
+}
+
+.product-cards .rating i {
+    color: var(--purplecolor);
+    font-size: 12px;
+}
+
+.product-cards .icos {
+    display: flex;
+    margin-top: 10px;
+}
+
+.product-cards .icos .cart {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: var(--purplecolor);
+}
+
+.product-cards .icos .wishlist {
+
+    padding: 5px 10px;
+    background-color: lightgray;
+}
+
+.product-cards .icos .cart i {
+    color: var(--whitecolor);
+    font-size: 13px;
+}
+
+.product-cards .icos .wishlist i {
+    color: gray;
+}
+
+/* End Arrival Section */
+
+
+/* Start Vest Banner */
+.vest-section {
+    padding: 50px 0;
+}
+
+.vest-section .unisex-jacket {
+    justify-content: space-between;
+    display: flex;
+}
+
+.vest-section .unisex-jacket .uni-one {
+    width: 40%;
+}
+
+.vest-section .unisex-jacket .running-jacket {
+    width: 56%;
+}
+
+.vest-section .unisex-jacket .uni-one img {
+    background-color: rgba(0, 0, 0, 1);
+    filter: none;
+    width: 100%;
+    height: 320px;
+}
+
+.vest-section .unisex-jacket .running-jacket img {
+    filter: brightness(40%);
+    width: 100%;
+    height: 320px;
+}
+
+.vest-section .unisex-jacket .uni-one,
+.vest-section .unisex-jacket .running-jacket {
+    position: relative;
+}
+
+.vest-section .unisex-jacket .uni-one .jacket-text {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    color: var(--whitecolor);
+}
+
+.vest-section .uni-one .jacket-text h2 {
+    text-transform: uppercase;
+    font-size: 45px;
+    letter-spacing: 2px;
+    margin-top: -15px;
+}
+
+.vest-section .uni-one .jacket-text h4 {
+    text-transform: uppercase;
+    color: var(--purplecolor);
+    font-weight: 400;
+    font-size: 23px;
+}
+
+.vest-section .unisex-jacket .uni-one .jacket-btn {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+
+}
+
+.vest-section .uni-one .jacket-btn .shop-btn {
+    text-decoration: none;
+    color: var(--whitecolor);
+    background-color: var(--purplecolor);
+    padding: 5px 20px;
+}
+
+
+.vest-section .unisex-jacket .running-jacket img {
+    width: 100%;
+    height: 320px;
+}
+
+.vest-section .unisex-jacket .running-jacket .running-text {
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    /* text-align: center; */
+    color: var(--whitecolor);
+}
+
+.vest-section .running-jacket .running-text h2 {
+    text-transform: uppercase;
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+
+.vest-section .running-jacket .running-text h4 {
+    text-transform: uppercase;
+    color: var(--purplecolor);
+    font-weight: 400;
+    font-size: 23px;
+}
+
+.vest-section .unisex-jacket .running-jacket .running-btn {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    right: 0;
+
+
+}
+
+.vest-section .running-jacket .running-btn .shop-btn {
+    text-decoration: none;
+    color: var(--whitecolor);
+    background-color: var(--purplecolor);
+    padding: 5px 20px;
+}
+
+/* End Vest Banner */
+
+
+/* Start Signup  */
+.signup-section {
+    background-image: url(../images/signbg.png);
+
+    padding: 50px 0;
+
+    position: relative;
+    background-size: cover;
+    height: 200px;
+    margin-bottom: 1px;
+}
+
+.signup-section .overlay {
+    width: 100%;
+    height: 100%;
+    /* background: var(--purplecolor); */
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+}
+
+.signup-section .sign-off {
+    display: flex;
+}
+
+.signup-section .sign-off .off {
+    margin-left: 20px;
+    display: flex;
+    margin-top: -30px;
+}
+
+.signup-section .sign-off .off h2 {
+    font-size: 90px;
+}
+
+.signup-section .sign-off .off h3 {
+    font-weight: 800;
+    font-size: 40px;
+    color: var(--whitecolor);
+    padding-top: 20px;
+    color: var(--whitecolor);
+}
+
+.signup-section .sign-off .off h4 {
+    font-weight: 800;
+    font-size: 40px;
+    color: var(--whitecolor);
+    margin-top: -26px;
+    color: var(--whitecolor);
+}
+
+
+
+.signup-section .container .main-text {
+    z-index: 1000;
+    display: flex;
+    position: absolute;
+    align-items: center;
+
+}
+
+.signup-section .main-text {
+    width: 100%;
+}
+
+.signup-section .sign-text {
+    width: 46%;
+}
+
+.signup-section .email-text {
+    width: 40%;
+    display: flex;
+    /* background-color: red; */
+}
+
+.signup-section .sign-text h2 {
+    color: var(--whitecolor);
+    margin-bottom: -15px;
+    font-size: 30px;
+    text-transform: uppercase;
+
+}
+
+.signup-section .sign-text span {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: var(--whitecolor);
+}
+
+.signup-section .sign-text p {
+    color: var(--whitecolor);
+    font-size: 17px;
+}
+
+.signup-section .email-text .inp input {
+    height: 35px;
+    outline: none;
+    width: 90%;
+}
+
+.signup-section .email-text .inp input::placeholder {
+    padding-left: 10px;
+}
+
+.email-text .inp {
+    width: 80%;
+
+}
+
+.email-text .signup-btn {
+    width: 67%;
+    margin: auto;
+}
+
+.email-text .signup-btn .btn-sign {
+    color: var(--whitecolor);
+    background-color: var(--blackcolor);
+    padding: 7px 30px;
+    text-decoration: none;
+}
+
+/* End Signup  */
+
+/* Start Footer */
+footer {
+    width: 100%;
+    background-color: black !important;
+    display: block;
+}
+
+.footer-inner {
+    width: 80%;
+    margin: auto;
+    padding: 30px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-items {
+    width: 25%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.footer-items-heading {
+    font-size: 23px !important;
+    color: var(--purplecolor);
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+footer>.footer-inner>.footer-items>address {
+    margin: 10px 0;
+    font-style: normal;
+    font-weight: 300;
+}
+
+footer>.footer-inner>.footer-items>ul {
+    list-style: none;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+footer>.footer-inner>.footer-items>ul>li {
+    margin: 10px 0;
+    height: 25px;
+    font-weight: 300;
+}
+
+footer>.footer-inner>.footer-items>ul>li>a {
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    transition: 0.3s;
+    font-weight: 300;
+}
+
+footer>.footer-inner>.footer-items>ul>li>a:hover {
+    color: var(--redcolor);
+}
+
+footer>.footer-inner>.footer-items>ul>li>i {
+    margin-right: 20px;
+    font-size: 18px;
+    color: var(--purplecolor);
+}
+
+
+@media screen and (max-width: 1275px) {
+    .footer-items {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .footer-items {
+        width: 100%;
+    }
+}
+
+.footer-copyright {
+    padding: 20px 0px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+hr {
+    background-color: gray !important;
+    border: none;
+    height: 1px;
+}
+
+/* End Footer */
+
+/* Start Media Responsive */
+@media screen and (min-width:414px) and  (max-width: 500px){
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 7px;
+    }
+    .banner-section {
+        background-image: url(../images/banner.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 65vh;
+    }
+}
+@media screen and (min-width:360px) and  (max-width: 660px){
+    /* nav form{
+        display: none;
+    } */
+    /* nav .mobile-nav{
+        display: flex;
+    } */
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 7px;
+    }
+    .banner-image {
+        display: none;
+    }
+    .banner-section .main-banner {
+        display: flex;
+        flex-direction: column;
+    }
+    .main-banner .banner-text {
+        padding: 35px 15px;
+        width: 100%;
+    }
+
+    .unisex-section .unisex-jacket {
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+    }
+    .unisex-section .unisex-jacket .uni-one {
+        width: 100%;
+    }
+    .uni-one .jacket-text h2 {
+        text-transform: uppercase;
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+    .unisex-section .unisex-jacket .running-jacket {
+        width: 100%;
+    }
+    .running-jacket .running-text h2 {
+        text-transform: uppercase;
+        font-size: 34px;
+        letter-spacing: 2px;
+    }
+    .arrival-text {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    .arrival-section .product-cards {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+
+    }
+    .product-cards .card img {
+        height: 250px;
+        margin: auto;
+        text-align: center;
+        /* margin-left: 35px; */
+    }
+
+    .product-cards .card .img-section{
+        text-align: center;
+    }
+    .product-cards .card{
+        margin-bottom: 30px;
+    }
+
+
+    .vest-section .unisex-jacket {
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+    }
+    .vest-section .unisex-jacket .running-jacket {
+        width: 100%;
+    }
+    .vest-section .running-jacket .running-text h2 {
+        text-transform: uppercase;
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+    .vest-section .unisex-jacket .running-jacket .running-btn {
+        position: absolute;
+        bottom: 80px;
+        left: 20px;
+        right: 0;
+    }
+
+    .vest-section .unisex-jacket .uni-one {
+        width: 100%;
+    }
+    .vest-section .uni-one .jacket-text h2 {
+        text-transform: uppercase;
+        font-size: 37px;
+        letter-spacing: 2px;
+        margin-top: -15px;
+    }
+    .vest-section .unisex-jacket .uni-one .jacket-btn {
+        position: absolute;
+        bottom: 60px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+    }
+
+    .signup-section .container .main-text {
+        z-index: 1000;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        flex-direction: column;
+    }
+    .signup-section .sign-text {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .signup-section {
+        background-image: url(../images/signbg.png);
+        padding: 50px 0;
+        position: relative;
+        background-size: cover;
+        height: 270px;
+        margin-bottom: 1px;
+    }
+    .signup-section .email-text {
+        width: 100%;
+        display: flex;
+        padding: 0 10px;
+        margin-top: 20px;
+
+    }
+
+    .footer-inner {
+        width: 100%;
+        margin: auto;
+        padding: 30px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (min-width:670px) and  (max-width: 900px){
+    .banner-image {
+        display: none;
+    }
+    .banner-section .main-banner {
+        display: flex;
+        flex-direction: column;
+    }
+    .main-banner .banner-text {
+        padding: 60px 15px;
+        width: 100%;
+    }
+    .banner-text h1 {
+        font-size: 60px;
+        color: var(--whitecolor);
+        text-transform: uppercase;
+    }
+    .banner-section {
+        background-image: url(../images/banner.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 55vh;
+    }
+    .uni-one .jacket-text h2 {
+        text-transform: uppercase;
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+    .uni-one .jacket-text h4 {
+        text-transform: uppercase;
+        color: var(--purplecolor);
+        font-weight: 400;
+        font-size: 17px;
+    }
+    .running-jacket .running-text h2 {
+        text-transform: uppercase;
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+    .running-jacket .running-text h4 {
+        text-transform: uppercase;
+        color: var(--purplecolor);
+        font-weight: 400;
+        font-size: 17px;
+    }
+    .arrival-text {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    .vest-section .running-jacket .running-text h2 {
+        text-transform: uppercase;
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+    .vest-section .running-jacket .running-text h4 {
+        text-transform: uppercase;
+        color: var(--purplecolor);
+        font-weight: 400;
+        font-size: 17px;
+    }
+    .vest-section .unisex-jacket .running-jacket .running-btn {
+        position: absolute;
+        bottom: 100px;
+        left: 20px;
+        right: 0;
+    }
+    .vest-section .uni-one .jacket-text h2 {
+        text-transform: uppercase;
+        font-size: 30px;
+        letter-spacing: 2px;
+        margin-top: -15px;
+    }
+    .vest-section .uni-one .jacket-text h4 {
+        text-transform: uppercase;
+        color: var(--purplecolor);
+        font-weight: 400;
+        font-size: 17px;
+    }
+    .vest-section .unisex-jacket .uni-one .jacket-btn {
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+    }
+    .signup-section .sign-text {
+        width: 55%;
+        padding: 0 15px;
+    }
+    .signup-section .email-text {
+        width: 47%;
+        display: flex;
+        /* background-color: red; */
+    }
+}
+/* End Media Responsive */
