@@ -285,7 +285,7 @@ header .navigation .menu-list li a {
 
 /* Start Banner */
 .banner-section {
-    
+    margin-bottom: 50px;
     background-image: url(../images/banner.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -706,7 +706,7 @@ header .navigation .menu-list li a {
     background-image: url(../images/signbg.png);
 
     padding: 50px 0;
-
+    margin-top: 50px;
     position: relative;
     background-size: cover;
     height: 200px;
@@ -834,7 +834,7 @@ footer {
 .footer-inner {
     width: 80%;
     margin: auto;
-    padding: 30px 10px;
+    padding: 50px 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
